@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Segar Jaya Distribusi — Smart Expiry &amp; Batch Management ERP (Odoo 19)</title>
+  <meta
+    name="description"
+    content="Website representasi proyek CV Segar Jaya Distribusi: pengelolaan distribusi makanan dan minuman berbasis Odoo 19 dengan pelacakan batch, tanggal kedaluwarsa, dan strategi FEFO."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigasi -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#beranda">
+        <span class="brand-mark" aria-hidden="true">SJ</span>
+        <span>
+          <span class="brand-name">CV Segar Jaya Distribusi</span>
+          <span class="brand-sub">Smart Expiry &amp; Batch ERP • Odoo 19</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
+        <a href="#profil">Profil</a>
+        <a href="#katalog">Katalog Produk</a>
+        <a href="#alur-erp">Alur Odoo 19</a>
+        <a href="#simulasi">Simulasi FEFO</a>
+        <a href="#proyek">Info Proyek</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-odoo btn-sm" href="#akses-odoo">Akses Odoo 19</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Buka menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badges">
+            <span class="badge badge-brand">Distributor Makanan &amp; Minuman</span>
+            <span class="badge badge-odoo">Berbasis Odoo 19 Community</span>
+          </div>
+          <h1>Distribusi Pangan Terkendali dengan Batch, Expiry, dan FEFO</h1>
+          <p class="lead">
+            Website representasi <strong>CV Segar Jaya Distribusi</strong> untuk proyek
+            <strong>Smart Expiry &amp; Batch Management ERP</strong>. Dirancang untuk memvisualisasikan
+            integrasi pesanan, persediaan per lot, tanggal kedaluwarsa, strategi pengeluaran FEFO, dan
+            penelusuran transaksi pada platform Odoo 19.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#simulasi">Coba Simulasi FEFO</a>
+            <a class="btn btn-secondary" href="#katalog">Lihat Katalog Produk</a>
+          </div>
+          <div class="hero-note">
+            <strong>Lingkup Representasi:</strong> CV Segar Jaya Distribusi adalah objek simulasi terkontrol
+            untuk mata kuliah Manajemen Proyek. Situs ini menampilkan profil perusahaan, katalog produk, dan
+            ilustrasi alur ERP Odoo 19 tanpa mengklaim hasil uji operasional perusahaan nyata.
+          </div>
+        </div>
+
+        <!-- Ringkasan Visual Modul Odoo 19 -->
+        <aside class="erp-card" aria-label="Ringkasan Stok Lot Odoo 19">
+          <div class="erp-card-head">
+            <span class="mono">Odoo 19 • Inventory / Lots &amp; Expiry</span>
+            <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="erp-card-body">
+            <div class="erp-meta">
+              <div>
+                <h3>Susu UHT 1 Liter (<span class="mono">SU1L</span>)</h3>
+                <span style="font-size: 12.5px; color: var(--text-muted);">
+                  Strategi Pengeluaran: <strong>FEFO</strong> • Acuan: 1 Nov 2026
+                </span>
+              </div>
+              <span class="badge badge-brand">450 Unit Layak</span>
+            </div>
+
+            <div class="lot-list">
+              <div class="lot-row expired">
+                <div>
+                  <div class="lot-id mono">B-EXP</div>
+                  <div class="lot-exp">Expiry: 15 Okt 2026</div>
+                </div>
+                <span class="badge badge-danger">50 unit • Expired</span>
+              </div>
+              <div class="lot-row">
+                <div>
+                  <div class="lot-id mono">B001</div>
+                  <div class="lot-exp">Expiry: 10 Nov 2026 • Prioritas #1</div>
+                </div>
+                <span class="badge badge-odoo">100 unit</span>
+              </div>
+              <div class="lot-row">
+                <div>
+                  <div class="lot-id mono">B002</div>
+                  <div class="lot-exp">Expiry: 30 Nov 2026 • Prioritas #2</div>
+                </div>
+                <span class="badge badge-brand">150 unit</span>
+              </div>
+              <div class="lot-row">
+                <div>
+                  <div class="lot-id mono">B003</div>
+                  <div class="lot-exp">Expiry: 20 Des 2026 • Prioritas #3</div>
+                </div>
+                <span class="badge badge-success">200 unit</span>
+              </div>
+            </div>
+
+            <div class="erp-modules" aria-label="Modul Odoo 19 yang digunakan">
+              <span class="module-pill">base</span>
+              <span class="module-pill">sale_management</span>
+              <span class="module-pill">stock</span>
+              <span class="module-pill">product_expiry</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Profil Perusahaan & Latar Belakang -->
+    <section class="section section-alt" id="profil">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Profil Perusahaan &amp; Latar Belakang</div>
+          <h2>Mengapa Pencatatan Batch &amp; Expiry Penting bagi Distributor?</h2>
+          <p>
+            CV Segar Jaya Distribusi berperan sebagai distributor produk makanan dan minuman kemasan yang
+            menyalurkan stok bermasa simpan terbatas ke mitra ritel. Pengelolaan manual berbasis formulir dan
+            spreadsheet rentan terhadap salah pilih lot, keterlambatan informasi stok, dan sulitnya penelusuran.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon-box">01</div>
+            <h3>Tantangan Proses Awal (As-Is)</h3>
+            <p>
+              Pada alur pencatatan terpisah, staf harus mencari stok, memeriksa tanggal kedaluwarsa, memilih
+              batch, memperbarui saldo, dan merekap transaksi secara manual sehingga rawan kesalahan input.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-box odoo">02</div>
+            <h3>Pendekatan Berbasis Odoo 19</h3>
+            <p>
+              Mengintegrasikan modul <em>Sales</em> dan <em>Inventory</em> (termasuk <em>Lots/Serial Numbers</em>,
+              <em>Expiration Dates</em>, dan <em>FEFO Removal Strategy</em>) dalam satu basis data terpadu.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-box">03</div>
+            <h3>Fokus Kendali &amp; Traceability</h3>
+            <p>
+              Setiap penerimaan dan pengiriman tertaut pada nomor batch tertentu, memudahkan penelusuran asal
+              dan tujuan barang serta pemisahan hak akses antarperan Sales, Gudang, dan Manajer.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <section class="section" id="katalog">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Katalog Distribusi</div>
+          <h2>Produk Makanan &amp; Minuman CV Segar Jaya</h2>
+          <p>
+            <strong>Susu UHT 1 Liter (<span class="mono">SU1L</span>)</strong> merupakan produk utama yang
+            dikonfigurasi dan diuji pada skenario Odoo 19, dilengkapi beberapa contoh kategori produk
+            distribusi untuk menggambarkan lini usaha perusahaan.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter kategori produk">
+          <button class="filter-btn active" type="button" data-filter="all">Semua</button>
+          <button class="filter-btn" type="button" data-filter="odoo-core">Produk Uji Odoo 19</button>
+          <button class="filter-btn" type="button" data-filter="Susu &amp; Dairy">Susu &amp; Dairy</button>
+          <button class="filter-btn" type="button" data-filter="Minuman">Minuman</button>
+          <button class="filter-btn" type="button" data-filter="Makanan Ringan">Makanan Ringan</button>
+          <button class="filter-btn" type="button" data-filter="Bahan Pangan">Bahan Pangan</button>
+        </div>
+
+        <div class="grid-3" id="catalog-grid">
+          <!-- Dirender oleh app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Alur Kerja ERP Odoo 19 -->
+    <section class="section section-alt" id="alur-erp">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Arsitektur Sistem</div>
+          <h2>Alur Operasional Terpadu di Odoo 19</h2>
+          <p>
+            Ringkasan alur dari pencatatan pesanan hingga laporan penelusuran batch yang menjadi fokus
+            konfigurasi proyek.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-step">
+            <span class="step-num">1</span>
+            <h3>Penerimaan &amp; Lot</h3>
+            <p>Barang masuk dicatat melalui <span class="mono">WH/IN</span> lengkap dengan nomor batch dan tanggal expiry.</p>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-num">2</span>
+            <h3>Sales Order</h3>
+            <p>Staf penjualan membuat pesanan pelanggan pada modul <span class="mono">sale_management</span>.</p>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-num">3</span>
+            <h3>Reservasi FEFO</h3>
+            <p>Odoo memprioritaskan lot dengan tanggal kedaluwarsa/removal terdekat saat reservasi stok.</p>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-num">4</span>
+            <h3>Delivery &amp; Saldo</h3>
+            <p>Validasi <span class="mono">WH/OUT</span> memperbarui saldo aktual per nomor lot secara otomatis.</p>
+          </article>
+
+          <article class="flow-step">
+            <span class="step-num">5</span>
+            <h3>Traceability</h3>
+            <p>Manajer dapat menelusuri riwayat pergerakan setiap batch dari pemasok hingga pelanggan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulasi Interaktif FEFO -->
+    <section class="section" id="simulasi">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Simulasi Interaktif</div>
+          <h2>Ilustrasi Alokasi Multi-Batch &amp; FEFO (<span class="mono">SU1L</span>)</h2>
+          <p>
+            Coba masukkan jumlah pesanan <strong>Susu UHT 1 Liter</strong> untuk melihat bagaimana urutan
+            <strong>FEFO</strong> mengalokasikan batch dan bagaimana perbedaan antara urutan FEFO dengan
+            pengecualian lot kedaluwarsa.
+          </p>
+        </div>
+
+        <div class="sim-wrapper">
+          <div class="card">
+            <h3>Parameter Simulasi Pesanan</h3>
+            <p>Skenario utama proyek menggunakan pesanan <strong>120 unit</strong> dari stok awal 450 unit layak.</p>
+
+            <form class="sim-controls" id="sim-form">
+              <div class="field">
+                <label for="sim-qty">Jumlah Pesanan Susu UHT 1 Liter (unit)</label>
+                <input
+                  id="sim-qty"
+                  name="qty"
+                  type="number"
+                  min="1"
+                  max="1000"
+                  value="120"
+                  required
+                />
+              </div>
+
+              <label class="checkbox-row">
+                <input id="sim-exclude-expired" type="checkbox" checked />
+                <span>
+                  <strong>Eksklusi lot kedaluwarsa (<code>B-EXP</code>)</strong><br />
+                  Jika dimatikan, simulasi menunjukkan bahwa urutan FEFO saja tanpa aturan kontrol expiry
+                  tetap dapat mengambil lot yang sudah kedaluwarsa.
+                </span>
+              </label>
+
+              <div class="sim-actions">
+                <button class="btn btn-primary" type="submit">Hitung Alokasi FEFO</button>
+                <button class="btn btn-secondary btn-sm" type="button" data-preset="120">
+                  120 unit (Utama)
+                </button>
+                <button class="btn btn-secondary btn-sm" type="button" data-preset="260">
+                  260 unit (3 Batch)
+                </button>
+                <button class="btn btn-secondary btn-sm" type="button" data-preset="500">
+                  500 unit (Over-stock)
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Hasil Simulasi Alokasi Lot</h3>
+            <div id="sim-alert" class="sim-alert ok" role="status" aria-live="polite"></div>
+
+            <div style="overflow-x: auto;">
+              <table class="sim-table">
+                <thead>
+                  <tr>
+                    <th>Lot</th>
+                    <th>Expiry</th>
+                    <th>Awal</th>
+                    <th>Dialokasikan</th>
+                    <th>Sisa</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="sim-tbody">
+                  <!-- Dirender oleh app.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <p id="sim-summary" style="margin-top: 12px; font-size: 12.5px; color: var(--text-muted);"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informasi Proyek & Akses Odoo -->
+    <section class="section section-alt" id="proyek">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Informasi Proyek Akademik</div>
+          <h2>Smart Expiry &amp; Batch Management ERP</h2>
+          <p>
+            Ringkasan pertanyaan penelitian, ruang lingkup, serta cara mengakses instansi lokal Odoo 19 milik tim.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Pertanyaan Penelitian (Research Canvas)</h3>
+            <ul class="info-list">
+              <li>
+                <strong>RQ1 (Fungsionalitas):</strong> Sejauh mana produk berbasis Odoo 19 memenuhi kebutuhan
+                fungsional pengelolaan pesanan, persediaan, batch, dan tanggal kedaluwarsa?
+              </li>
+              <li>
+                <strong>RQ2 (Perbandingan Tugas):</strong> Bagaimana perbedaan waktu penyelesaian dan kesalahan
+                pencatatan antara proses awal (As-Is) dan penggunaan produk pada tugas yang setara?
+              </li>
+            </ul>
+            <p style="margin-top: 14px; font-size: 13px;">
+              <strong>Catatan Transparansi:</strong> Website ini merupakan representasi visual proyek.
+              Evaluasi perbandingan pengguna manusia (rencana 5 peserta) merupakan tahap terpisah dan belum
+              diklaim sebagai hasil selesai di halaman ini.
+            </p>
+          </article>
+
+          <aside class="odoo-access-box" id="akses-odoo">
+            <span class="badge" style="background: rgba(255,255,255,0.14); color: #fff; width: fit-content;">
+              Backend ERP • Odoo 19 Community (Docker)
+            </span>
+            <h3 style="margin: 0; font-size: 20px;">Akses Instansi Odoo 19 Lokal</h3>
+            <p>
+              Sistem backend ERP proyek berjalan secara lokal menggunakan Docker Compose + PostgreSQL dengan
+              paket distribusi mandiri (<span class="mono">Odoo_SegarJaya_Demo</span>).
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="code-chip">Demo Tim: http://localhost:11019/odoo</span>
+              <span class="code-chip">Sumber Lokal: http://localhost:10019/odoo</span>
+            </div>
+            <p style="font-size: 12.5px;">
+              Pastikan Docker Desktop dan kontainer Odoo 19 sedang aktif sebelum membuka tautan lokal di atas.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px;">
+              <a
+                class="btn btn-primary btn-sm"
+                href="http://localhost:11019/odoo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buka Odoo Demo (11019)
+              </a>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="http://localhost:10019/odoo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buka Odoo Lokal (10019)
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Detail Produk -->
+  <div class="modal-backdrop" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="modal-title">Detail Produk</h3>
+        <button class="modal-close" type="button" data-close-modal aria-label="Tutup">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-foot">
+        <button class="btn btn-secondary btn-sm" type="button" data-close-modal>Tutup</button>
+        <button class="btn btn-primary btn-sm" type="button" id="modal-sim-btn">
+          Buka Simulasi FEFO
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>CV Segar Jaya Distribusi</strong> — Representasi Proyek Manajemen Proyek (Odoo 19 Community)
+      </div>
+      <div>
+        Smart Expiry &amp; Batch Management ERP • Dibuat sebagai website statis sederhana (HTML/CSS/JS)
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
